@@ -121,28 +121,31 @@
   height: 420px;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Lock content to exact card size */
 }
 
 /* Terminal View */
 .hud-terminal-view {
-  flex-grow: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 1.25rem;
   background-color: rgba(0, 0, 0, 0.15);
+  overflow: hidden; /* Lock logs and form inputs to prevent page overflow */
 }
 
 .hud-terminal-log {
-  flex-grow: 1;
-  overflow-y: auto;
+  flex: 1 1 0%; /* Allow logs container to grow/shrink inside layout */
+  min-height: 0; /* Enable flex-child scroll */
+  overflow-y: auto; /* Enable vertical scroll */
+  scrollbar-width: thin; /* Firefox scrollbar support */
+  scrollbar-color: #5c473c rgba(0, 0, 0, 0.25); /* Firefox scrollbar coloring */
   font-family: var(--font-mono);
   font-size: 0.875rem;
   line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
   margin-bottom: 0.75rem;
   padding-right: 0.5rem;
+  display: block; /* Standard block display for stable browser scroll */
 }
 
 .hud-terminal-log::-webkit-scrollbar {
@@ -159,6 +162,10 @@
 }
 .hud-terminal-log::-webkit-scrollbar-thumb:hover {
   background: var(--accent-amber);
+}
+
+.log-row {
+  margin-bottom: 0.35rem; /* Replaces flex gap spacing */
 }
 
 .log-row.system { color: #8c7569; }
