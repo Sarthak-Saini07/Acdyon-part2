@@ -1,0 +1,83 @@
+/* src/styles/variables.css */
+
+:root {
+  /* Default Theme (Dark Mode - Espresso & Roasted Beans) */
+  --bg-color: #120a06;
+  --bg-noise: #1a120c;
+  --surface-color: #1a120c;
+  --surface-hover: #241913;
+  --border-color: #3d2b20;
+  --border-hover: #543b2c;
+  
+  /* Accents & Highlights */
+  --accent-amber: #d97706;
+  --accent-amber-glow: rgba(217, 119, 6, 0.3);
+  --accent-hover: #f59e0b;
+  --accent-latte: #e0a96d;
+  --accent-pecan: #a88e7a;
+  
+  /* Syntax Highlighting (Coffee tones) */
+  --token-keyword: #e0a96d;
+  --token-string: #f59e0b;
+  --token-number: #d97706;
+  --token-comment: #6f584b;
+  --token-property: #c6a287;
+  
+  /* Typography Colors */
+  --text-primary: #f7ebd3;
+  --text-secondary: #a88e7a;
+  --text-muted: #6f584b;
+  --text-inverse: #120a06;
+
+  /* Shadow & Glow */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --coffee-glow: 0 0 25px rgba(217, 119, 6, 0.2);
+  --coffee-glow-strong: 0 0 35px rgba(217, 119, 6, 0.4);
+
+  /* Fonts */
+  --font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Variables (Oat Milk, Cream & Latte) */
+:root[data-theme='light'] {
+  --bg-color: #faf6f0;
+  --bg-noise: #f3ece1;
+  --surface-color: #f3ece1;
+  --surface-hover: #eae2d5;
+  --border-color: #e3d5c5;
+  --border-hover: #d2c0ab;
+  
+  /* Accents & Highlights */
+  --accent-amber: #b45309;
+  --accent-amber-glow: rgba(180, 83, 9, 0.2);
+  --accent-hover: #d97706;
+  --accent-latte: #854d0e;
+  --accent-pecan: #78350f;
+  
+  /* Syntax Highlighting (Darker Coffee tones) */
+  --token-keyword: #854d0e;
+  --token-string: #b45309;
+  --token-number: #d97706;
+  --token-comment: #a18276;
+  --token-property: #5c473c;
+  
+  /* Typography Colors */
+  --text-primary: #2c1810;
+  --text-secondary: #5c473c;
+  --text-muted: #8c7569;
+  --text-inverse: #faf6f0;
+
+  /* Shadow & Glow */
+  --shadow-sm: 0 2px 8px rgba(44, 24, 16, 0.05);
+  --shadow-md: 0 8px 24px rgba(44, 24, 16, 0.08);
+  --shadow-lg: 0 16px 40px rgba(44, 24, 16, 0.12);
+  --coffee-glow: 0 0 25px rgba(180, 83, 9, 0.12);
+  --coffee-glow-strong: 0 0 35px rgba(180, 83, 9, 0.25);
+}
